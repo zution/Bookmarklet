@@ -63,11 +63,26 @@ switch(answer) {
         var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);
         break;
     case "shorten url":
-        window.open("https://is.gd/create.php?longurl="+encodeURIComponent(location.href), "_blank");
+        window.open("https://is.gd/create.php?longurl=" + encodeURIComponent(location.href), "_blank");
         break;
     case "performance":
         javascript:(function(){var el=document.createElement('script');el.type='text/javascript';el.src='https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js';el.onerror=function(){alert("Looks like the Content Security Policy directive is blocking the use of bookmarklets\n\nYou can copy and paste the content of:\n\n\"https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js\"\n\ninto your console instead\n\n(link is in console already)");console.log("https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js");};document.getElementsByTagName('body')[0].appendChild(el);})();
         break;
+    case "joke":
+        var jokes = ["What do you call a bagel that can fly?", "Why can't a nose be 12 inches long?", "If you're American when you go in and when you go out, what are you when you're inside the bathroom?", "What do you call a can opener that can't open cans?", "Did you hear about the Italian chef that passed away?", "I sold my vacuum cleaner.", "What do you call an alligator in a vest?", "The wedding was so beautiful.", "What did the janitor say when he jumped out of the closet?", "What did the bison say to his son when he left?", "What did the pirate say when he turned 80?"];
+        var answers = ["A plane bagel!", "Then it would be a foot.", "European (try to understand it)", "A can't opener", "He pasta-way", "All it did was collecting dust.", "An in-vest-i-gator", "Even the cake was in tiers.", "Supplies!", "Bison.", "Aye, matey!"];
+        var randNum = Math.floor(Math.random() * (11));
+        alert(jokes[randNum]);
+        alert(answers[randNum]);
+    case "convert temp":
+        var ans = prompt("C to F or F to C?");
+        if (ans == 1 || ans == "C to F" || ans == "one" || ans == "first") {
+            alert(Math.round(Number(prompt("temperature?")) * 1.8 + 32));
+        } else if (ans == 2 || ans == "F to C" || ans == "two" || ans == "second") {
+            alert(Math.round(Number(prompt("temperature?")) - 32) * 5 / 9);
+        } else {
+            alert("Invalid answer.");
+        }
     default:
-        alert("Sorry, that is not recognized.");
+        alert("Sorry, please enter another command. That command is not recognized.");
 }
