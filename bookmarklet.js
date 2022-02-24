@@ -35,14 +35,15 @@ switch(answer) {
         break;
     case "dark":
         javascript:(d=>{d.head.appendChild(d.createElement('style')).innerText='html,img,video{filter:invert(1)hue-rotate(180deg)sepia(0)grayscale(0.05);filter:invert(0.8)hue-rotate(180deg)sepia(0)grayscale(0.05))}';})(document);
-        alert("Dark mode activated! Note that some websites may break, and websites already in dark mode will turn to light mode.");
+        alert("Dark mode activated! Note that some websites may break, and websites already in dark mode (not using this) will turn into light mode.");
         break;
     case "revert dark":
         javascript:(d=>{d.head.appendChild(d.createElement('style')).innerText='html,img,video{filter:invert(0)hue-rotate(0deg)sepia(0)grayscale(0);filter:invert(0)hue-rotate(0deg)sepia(0)grayscale(0))}';})(document);
-        alert("Dark mode reverted! Broken websites will now appear normal, and all websites with dark mode activated using this will be in dark mode.");
+        alert("Dark mode reverted! Broken websites will now appear normal, and all websites with dark mode activated using this will be in light mode.");
         break;
     case "remove cookies":
-        var numCookies=0; var cookieArray=document.cookie.split("; "); for(var i=0; i<cookieArray.length && cookieArray[i]; i++) {numCookies++; for(var subDomain= "." + location.host; subDomain; subDomain=subDomain.replace(/^(?:%5C.|[^%5C.]+)/, "")){ for(var curPath =location.pathname; curPath; curPath=curPath.replace(/.$/,"")){document.cookie=(cookieArray[i] + "; domain=" + subDomain + "; path=" + curPath + "; expires="+new Date((new Date()).getTime()-1e11).toGMTString());}}} alert(numCookies + " cookies were removed."); window.location.href = "http://" + window.location.host + window.location.pathname;
+        document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+        alert("Done! All cookies were removed.")
         break;
     case "edit page":
         var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);
@@ -72,6 +73,9 @@ switch(answer) {
         break;
     case "news":
         alert("Russia has just invaded Ukraine after months of anxiety and desparate diplomacy attempts. Places such as Chernobyl have been capture as a result of a full-scale, multi-side invasion by Russia. Biden declares that \"Putin chose this war [and must] bear the consequences\" of it, revealing sanctions against Russia. EU is calling for united action against Russia.\n\nA new COVID-19 variant has been discovered, and has been given the name of BA.2. Not much is known yet, although what we know is concerning. Not only is it more transmissible than Omicron, cases are more severe. This only uses data from 2 recent studies, and data may be wrong. \n\nBird flu was discovered near the DC area, in Virginia, and this raised many concerns. Bird flu is spreading rapidly, and this can lead to chickens getting very ill. Many chickens are dying as a result, and some humans may too. This can spread to humans, and has a fatality rate of 60%."); // Yes, I fully intend to manually update this.
+        break;
+    case "using":
+        javascript: (function() { var d = document, e = d.getElementById('wappalyzer-container'); if (e !== null) { d.body.removeChild(e); } var u = 'https://www.wappalyzer.com/', t = new Date().getTime(), c = d.createElement('div'), p = d.createElement('div'), l = d.createElement('link'), s = d.createElement('script'); c.setAttribute('id', 'wappalyzer-container'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', u + 'css/bookmarklet.css'); d.head.appendChild(l); p.setAttribute('id', 'wappalyzer-pending'); p.setAttribute('style', 'background-image: url(' + u + 'images/spinner.gif) !important'); c.appendChild(p); s.setAttribute('src', u + 'bookmarklet/wappalyzer.js'); s.onload = function() { window.wappalyzer = new Wappalyzer(); s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/apps.js'); s.onload = function() { s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/driver.js'); c.appendChild(s); }; c.appendChild(s); }; c.appendChild(s); d.body.appendChild(c); })();
         break;
     default:
         alert("Sorry, please enter another command. That command is not recognized.");
