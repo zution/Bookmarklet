@@ -86,7 +86,7 @@ switch(answer) {
         }
         break;
     case "news":
-        alert("")// es, I fully intend to manually update this.
+        alert("Russia has just invaded Ukraine after months of anxiety and desparate diplomacy attempts. Places such as Chernobyl have been capture as a result of a full-scale, multi-side invasion by Russia. Biden declares that \"Putin chose this war [and must] bear the consequences\" of it, revealing sanctions against Russia. EU is calling for united action against Russia.\n\n A new COVID"//Yes, I fully intend to manually update this.
     default:
         alert("Sorry, please enter another command. That command is not recognized.");
 }
