@@ -21,6 +21,7 @@ If you are on mobile, save any page as a bookmark, edit the bookmark, rename it 
 * joke: tells a random, terrible joke that you will not laugh at
 * convert temp: converts temperature from Celsius to Farenheit or vice versa
 * news: manually selected and written (by me) news updated every day, and it's a good idea to read this if you never know what's going on
+* using: tells you what the site is using (Bootstrap, Ruby on Rails, GitHub Pages, etc.)
 
 ## Troubleshooting
 ### It says something about the Content Security Policy
