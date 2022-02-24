@@ -42,7 +42,7 @@ switch(answer) {
                 alert(Math.pow(num1, num2));
                 break;
             default:
-                alert("invalid answer");
+                alert("Invalid answer.");
         }
         break;
     case "srch":
@@ -69,20 +69,24 @@ switch(answer) {
         javascript:(function(){var el=document.createElement('script');el.type='text/javascript';el.src='https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js';el.onerror=function(){alert("Looks like the Content Security Policy directive is blocking the use of bookmarklets\n\nYou can copy and paste the content of:\n\n\"https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js\"\n\ninto your console instead\n\n(link is in console already)");console.log("https://micmro.github.io/performance-bookmarklet/dist/performanceBookmarklet.min.js");};document.getElementsByTagName('body')[0].appendChild(el);})();
         break;
     case "joke":
-        var jokes = ["What do you call a bagel that can fly?", "Why can't a nose be 12 inches long?", "If you're American when you go in and when you go out, what are you when you're inside the bathroom?", "What do you call a can opener that can't open cans?", "Did you hear about the Italian chef that passed away?", "I sold my vacuum cleaner.", "What do you call an alligator in a vest?", "The wedding was so beautiful.", "What did the janitor say when he jumped out of the closet?", "What did the bison say to his son when he left?", "What did the pirate say when he turned 80?"];
-        var answers = ["A plane bagel!", "Then it would be a foot.", "European (try to understand it)", "A can't opener", "He pasta-way", "All it did was collecting dust.", "An in-vest-i-gator", "Even the cake was in tiers.", "Supplies!", "Bison.", "Aye, matey!"];
-        var randNum = Math.floor(Math.random() * (11));
+        var jokes = ["What do you call a bagel that can fly?", "Why can't a nose be 12 inches long?", "If you're American when you go in and when you go out, what are you when you're inside the bathroom?", "What do you call a can opener that can't open cans?", "Did you hear about the Italian chef that passed away?", "I sold my vacuum cleaner.", "What do you call an alligator in a vest?", "The wedding was so beautiful.", "What did the janitor say when he jumped out of the closet?", "What did the bison say to his son when he left?", "What did the pirate say when he turned 80?", "That's a pretty good ceiling.", "Did you hear about the kidnapping at the school?", "I hate Russian dolls."];
+        var answers = ["A plane bagel!", "Then it would be a foot.", "European (try to understand it)", "A can't opener", "He pasta-way", "All it did was collecting dust.", "An in-vest-i-gator", "Even the cake was in tiers.", "Supplies!", "Bison.", "Aye, matey!", "It's not the best, but it's certainly up there!", "He woke up eventually.", "They're so full of themselves."];
+        var randNum = Math.floor(Math.random() * (14));
         alert(jokes[randNum]);
         alert(answers[randNum]);
+        break;
     case "convert temp":
         var ans = prompt("C to F or F to C?");
         if (ans == 1 || ans == "C to F" || ans == "one" || ans == "first") {
-            alert(Math.round(Number(prompt("temperature?")) * 1.8 + 32));
+            alert(Math.round(Number(prompt("temperature?")) * 1.8 + 32) + "° F");
         } else if (ans == 2 || ans == "F to C" || ans == "two" || ans == "second") {
-            alert(Math.round(Number(prompt("temperature?")) - 32) * 5 / 9);
+            alert(Math.round((prompt("temperature?") - 32) * 5 / 9) + "° C");
         } else {
             alert("Invalid answer.");
         }
+        break;
+    case "news":
+        alert("")// es, I fully intend to manually update this.
     default:
         alert("Sorry, please enter another command. That command is not recognized.");
 }
