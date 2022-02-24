@@ -1,20 +1,5 @@
 /*
 BOOKMARKLET: javascript:(function(){var el=document.createElement('script');el.type='text/javascript';el.src='https://zution.github.io/Bookmarklet/bookmarklet.js';el.onerror=function(){alert("Due to the Content Security Policy, this bookmarklet is unable to run. There is nothing you can do. If you are the owner and are a developer, consider going here: \n\n https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP");};document.getElementsByTagName('body')[0].appendChild(el);})();
-
-List of functions:
- - calc: calculates two-number equations, supporting addition, subtraction, multiplication, division, modulus, and power
- - srch: searches google
- - dark: enables dark mode (does not work on some sites, on others it may look ugly)
-   CREDIT: https://forum.duolingo.com/comment/39222130/GUIDE-How-to-get-features-like-DarkMode-and-Font-Style-using-Bookmarklets
- - revert dark: reverts dark mode if activated via bookmarklet
-   CREDIT: https://forum.duolingo.com/comment/39222130/GUIDE-How-to-get-features-like-DarkMode-and-Font-Style-using-Bookmarklets (modified code from here)
- - remove cookies: clears cookies on page
-   CREDIT: https://github.com/timothybrady/Clear-cookies-bookmarklet
- - shorten url: shortens the current URL with is.gd URL shortener
- - edit page: edits the page (for coders mainly; usable by most people with a bit of experimenting and guessing)
-CREDIT: https://x-ray-goggles.mouse.org/
- - performance: shows EXTREMELY technical statistics, most will not understand
-   CREDIT: https://github.com/micmro/performance-bookmarklet
 */
 var answer = prompt("What do you need?");
 switch(answer) {
@@ -86,7 +71,8 @@ switch(answer) {
         }
         break;
     case "news":
-        alert("Russia has just invaded Ukraine after months of anxiety and desparate diplomacy attempts. Places such as Chernobyl have been capture as a result of a full-scale, multi-side invasion by Russia. Biden declares that \"Putin chose this war [and must] bear the consequences\" of it, revealing sanctions against Russia. EU is calling for united action against Russia.\n\n A new COVID"//Yes, I fully intend to manually update this.
+        alert("Russia has just invaded Ukraine after months of anxiety and desparate diplomacy attempts. Places such as Chernobyl have been capture as a result of a full-scale, multi-side invasion by Russia. Biden declares that \"Putin chose this war [and must] bear the consequences\" of it, revealing sanctions against Russia. EU is calling for united action against Russia.\n\nA new COVID-19 variant has been discovered, and has been given the name of BA.2. Not much is known yet, although what we know is concerning. Not only is it more transmissible than Omicron, cases are more severe. This only uses data from 2 recent studies, and data may be wrong. \n\nBird flu was discovered near the DC area, in Virginia, and this raised many concerns. Bird flu is spreading rapidly, and this can lead to chickens getting very ill. Many chickens are dying as a result, and some humans may too. This can spread to humans, and has a fatality rate of 60%."); // Yes, I fully intend to manually update this.
+        break;
     default:
         alert("Sorry, please enter another command. That command is not recognized.");
 }
