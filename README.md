@@ -18,16 +18,19 @@ If you are on mobile, save any page as a bookmark, edit the bookmark, rename it 
 * shorten url: shortens the current URL with is.gd URL shortener
 * edit page: has an interface for editing the page (for coders mainly; usable by most people with a bit of experimenting and guessing)
 * performance: shows technical statistics, most will not understand
+* joke: tells a random, terrible joke that you will not laugh at
+* convert temp: converts temperature from Celsius to Farenheit or vice versa
+* news: manually selected and written (by me) news updated every day, and it's a good idea to read this if you never know what's going on
 
 ## Troubleshooting
 ### It says something about the Content Security Policy
 This is something to maintain security in modern browsers, and wesbites may choose to block certain functions of boomarklets if they wish. There is, unfortunately, nothing that can be done to fix this, unless you (the user) are the operator of the site.
 ### Nothing is happening when I click on it
-Some sites, such as chrome://version, will fail to execute bookmarklets at all. This is likely due to security reasons. [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is a nice place to test all of your features if you want to test this bookmarklet. Then again, there is a likely possibility of something happening to GitHub, or some other technical reason, as this bookmarklet runs code from GitHub, and most of the code is hosted here.
-### When I search the page or shorten the URL (and if searching for a page inputs the query), nothing happens after that
+Some sites, such as chrome://version, will fail to execute bookmarklets at all. This is likely due to security reasons. [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is a nice place to test all the features if you want to test this bookmarklet. Then again, there is a likely possibility of something happening to GitHub, or some other technical reason, as this bookmarklet runs code from GitHub, and most of the code is hosted here.
+### When I search Google or shorten the URL (and if searching for a page inputs the query), nothing happens after that
 You'll likely see something along the lines of "Pop-up Blocked". Most browsers block new tabs being opened by default, so the user isn't spammed with tabs, forced to see certain tabs, etc.. You can click on this and then proceed to enable it for that site only, or search up how to enable it for all websites if you wish.
 
-## Credit
+## Credits
 [Dark Mode](https://forum.duolingo.com/comment/39222130/GUIDE-How-to-get-features-like-DarkMode-and-Font-Style-using-Bookmarklets)
 
 [Clear Cookies](https://github.com/timothybrady/Clear-cookies-bookmarklet)
@@ -35,4 +38,3 @@ You'll likely see something along the lines of "Pop-up Blocked". Most browsers b
 [Edit Page](https://x-ray-goggles.mouse.org/)
 
 [Performance](https://github.com/micmro/performance-bookmarklet)
-
