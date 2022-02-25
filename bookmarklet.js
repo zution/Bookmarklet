@@ -77,6 +77,9 @@ switch(answer) {
     case "using":
         javascript: (function() { var d = document, e = d.getElementById('wappalyzer-container'); if (e !== null) { d.body.removeChild(e); } var u = 'https://www.wappalyzer.com/', t = new Date().getTime(), c = d.createElement('div'), p = d.createElement('div'), l = d.createElement('link'), s = d.createElement('script'); c.setAttribute('id', 'wappalyzer-container'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', u + 'css/bookmarklet.css'); d.head.appendChild(l); p.setAttribute('id', 'wappalyzer-pending'); p.setAttribute('style', 'background-image: url(' + u + 'images/spinner.gif) !important'); c.appendChild(p); s.setAttribute('src', u + 'bookmarklet/wappalyzer.js'); s.onload = function() { window.wappalyzer = new Wappalyzer(); s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/apps.js'); s.onload = function() { s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/driver.js'); c.appendChild(s); }; c.appendChild(s); }; c.appendChild(s); d.body.appendChild(c); })();
         break;
+    case "help":
+        alert("calc: supports two number equations, with addition, subtraction, multiplication, division, modulus, and exponents\nsrch: searches google\ndark: enables dark mode\nrevert dark: reverts dark mode\nremove cookies: removes cookies\nshorten url: shortens url with is.gd\nedit page: shows an interface to edit the page\nperformance: shows technical statistics\njoke: tells a joke\nconvert temp: converts C to F or vice versa\nnews: shows news written by me\nusing: shows what the site is using\nhelp: list of commands");
+        break;
     default:
         alert("Sorry, please enter another command. That command is not recognized.");
 }
