@@ -4,6 +4,9 @@ BOOKMARKLET: javascript:(function(){var el=document.createElement('script');el.t
 I feel rusty in my coding skills tbh
 */
 var answer = prompt("What do you need?");
+console.log(answer);
+answer = String(answer)
+answer = answer.toLowerCase();
 switch(answer) {
     case "calc":
         let num1 = Number(prompt("Number 1"));
@@ -74,9 +77,6 @@ switch(answer) {
             alert("Invalid answer.");
         }
         break;
-    case "news":
-        alert("Russia has just invaded Ukraine after months of anxiety and desparate diplomacy attempts. Places such as Chernobyl have been capture as a result of a full-scale, multi-side invasion by Russia. Biden declares that \"Putin chose this war [and must] bear the consequences\" of it, revealing sanctions against Russia. EU is calling for united action against Russia.\n\nA new COVID-19 variant has been discovered, and has been given the name of BA.2. Not much is known yet, although what we know is concerning. Not only is it more transmissible than Omicron, cases are more severe. This only uses data from 2 recent studies, and data may be wrong. \n\nBird flu was discovered near the DC area, in Virginia, and this raised many concerns. Bird flu is spreading rapidly, and this can lead to chickens getting very ill. Many chickens are dying as a result, and some humans may too. This can spread to humans, and has a fatality rate of 60%."); // Yes, I fully intend to manually update this.
-        break;
     case "using":
         javascript: (function() { var d = document, e = d.getElementById('wappalyzer-container'); if (e !== null) { d.body.removeChild(e); } var u = 'https://www.wappalyzer.com/', t = new Date().getTime(), c = d.createElement('div'), p = d.createElement('div'), l = d.createElement('link'), s = d.createElement('script'); c.setAttribute('id', 'wappalyzer-container'); l.setAttribute('rel', 'stylesheet'); l.setAttribute('href', u + 'css/bookmarklet.css'); d.head.appendChild(l); p.setAttribute('id', 'wappalyzer-pending'); p.setAttribute('style', 'background-image: url(' + u + 'images/spinner.gif) !important'); c.appendChild(p); s.setAttribute('src', u + 'bookmarklet/wappalyzer.js'); s.onload = function() { window.wappalyzer = new Wappalyzer(); s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/apps.js'); s.onload = function() { s = d.createElement('script'); s.setAttribute('src', u + 'bookmarklet/driver.js'); c.appendChild(s); }; c.appendChild(s); }; c.appendChild(s); d.body.appendChild(c); })();
         break;
@@ -111,7 +111,7 @@ switch(answer) {
         }
         break;
     default:
-        if (answer !== "") {
+        if (answer !== "" && answer !== "null") {
             alert("Sorry, please enter another command. That command is not recognized.");
         } else {
             alert("You want me to do nothing? Then I will!");
